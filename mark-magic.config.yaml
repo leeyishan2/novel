@@ -22,3 +22,4 @@ tasks:
       config:
         path: ./dist/docs/ # Output directory
         name: '无关风月' # Name of the novel
+        base: /novel/
