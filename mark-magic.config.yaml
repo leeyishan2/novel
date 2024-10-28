@@ -1,0 +1,24 @@
+# mark-magic.config.yaml
+tasks:
+  - name: epub
+    input:
+      name: '@mark-magic/plugin-local' # Input plugin, read from local directory
+      config:
+        path: ./books/ # Reading directory
+    output:
+      name: '@mark-magic/plugin-epub' # Output plugin, generate epub files
+      config:
+        path: ./dist/my-book.epub # Generate path
+        id: novel # Unique ID of the novel
+        title: 无关风月 # Name of the novel
+        creator: Mark Magic # Creator
+  - name: docs
+    input:
+      name: '@mark-magic/plugin-local' # Same as above
+      config:
+        path: ./books/
+    output:
+      name: '@mark-magic/plugin-docs' # Same as above
+      config:
+        path: ./dist/docs/ # Output directory
+        name: '无关风月' # Name of the novel
